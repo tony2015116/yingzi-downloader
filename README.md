@@ -74,14 +74,10 @@ build.bat                  :: 打包成 dist\影子科技数据下载器.exe
 
 ### 发布新版本
 
-推送 `v` 开头的标签，GitHub Actions 会在 Windows 上自动打包并发布到 Releases：
+把 `VERSION` 文件里的版本号改大（如 `1.0.1`），连同代码一起推送到 main。GitHub Actions 会在 Windows 上自动打包，并以 `v1.0.1` 发布到 Releases。
 
-```bash
-git tag v1.0.1
-git push origin v1.0.1
-```
-
-在仓库的 Actions 页面手动运行「打包 Windows exe」，只打包不发布，exe 在运行结果的 Artifacts 里下载。
+- 版本号没改时，推送到 main 只打包、不发布；exe 在 Actions 运行结果的 Artifacts 里下载，可用来先试一试。
+- 也可以推送 `v` 开头的标签来发布，例如 `git tag v1.0.1 && git push origin v1.0.1`。
 
 ## 代码结构
 
