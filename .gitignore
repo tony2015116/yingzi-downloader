@@ -1,0 +1,27 @@
+# 账号密码（.env.example 是模板，可以提交）
+.env
+
+# 运行时生成：登录缓存、出错截图、设置、日志、下载记录
+browser_profile/
+debug/
+*设置.json
+*.log
+*下载记录.csv
+
+# 打包输出
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
